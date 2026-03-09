@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    const greetingElement = document.getElementById('greeting');
+    const greetingElement = document.getElementById('greeting').innerHTML = greeting;
     
     if (greetingElement) {
         const hour = new Date().getHours();
