@@ -44,3 +44,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const greetingElement = document.getElementById('greeting');
+    
+    if (greetingElement) {
+        const hour = new Date().getHours();
+        let greeting; 
+        if (hour < 18 && hour >= 6) {
+            greeting = "Bom dia!";
+        } else {
+            greeting = "Boa noite!";
+        }
+        greetingElement.textContent = greeting;
+    }
+});
